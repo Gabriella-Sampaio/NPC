@@ -1,100 +1,103 @@
-﻿Console.Clear();
-
-bool inimigoProximo = false, ferido = true, eliminado = false;
-int iP = 0, iA = 0;
+﻿bool inimigoProximo, ferido = true, eliminado = false;
+int transi = 0;
 Random gerador = new Random();
 
-Console.WriteLine("NPC");
-Console.Write("Digite o nome do NPC: ");
-string nomeNpc = Console.ReadLine()!;
+string nomeNpc = UI.SolicitaNomeNpc();
+UI.MensagemSaudacao(nomeNpc);
 
-Console.WriteLine($"olá {nomeNpc}");
-
-while(!eliminado) //PROCURANDO
+while (!eliminado) //PROCURANDO
 {
-    iP++;
-
+    transi++;
     int nmAlPr = gerador.Next(1, 2);
 
-    Console.Write($"Teste - ta procurando... ");
+    Console.Write($"{transi}ª ação, {nomeNpc} está procurando");
+    UI.Aguardar();
 
-    if(nmAlPr == 1) // volta pro atacando
+    if (nmAlPr == 1) // volta pro atacando
     {
         ferido = false;
         inimigoProximo = true;
         eliminado = false;
-        Console.WriteLine($"vai atacar");
+        Console.WriteLine($"Os monstros estão por perto e {nomeNpc} vai atacar"); Thread.Sleep(600);
     }
 
     else // continua procurando
     {
         inimigoProximo = false;
-        Console.WriteLine($"vai continuar procurando");
+        Console.WriteLine($"vai continuar procurando"); Thread.Sleep(600);
     }
 
 
-    while(!eliminado && !ferido && inimigoProximo) //ATACANDO
+    while (!eliminado && !ferido && inimigoProximo) //ATACANDO
     {
-        
-        iA++;
+        transi++;
         // Random gerador = new Random();
         int nmAlAt = gerador.Next(1, 5);
-        
-        Console.Write($"Teste - ta atacando... ");
-        
-        if(nmAlAt == 1) // continua
+        int nmInimigo = gerador.Next(1, 4); //nm gerador inimigo
+
+        Console.WriteLine($"{transi}ª ação - {nomeNpc} ataca Randall");
+        UI.InimigoRandall();
+
+        //COLOCAR MONSTROS DIFERENTES
+
+        UI.Aguardar();
+
+        if (nmAlAt == 1) // continua
         {
             ferido = false;
             inimigoProximo = true;
-            Console.WriteLine($"vai continuar atacando");
+            Console.WriteLine($"vai continuar atacando"); Thread.Sleep(600);
         }
 
-        else if(nmAlAt == 2) // fugindo
+        else if (nmAlAt == 2) // fugindo
         {
             ferido = true;
-            Console.WriteLine($"vai fugir");
+            Console.WriteLine($"vai fugir"); Thread.Sleep(600);
 
         }
 
-        else if(nmAlAt == 3) //volta pro procurando
+        else if (nmAlAt == 3) //volta pro procurando
         {
             ferido = true;
             inimigoProximo = false;
-            Console.WriteLine($"vai procurar");
+            Console.WriteLine($"desiste e volta a procurar"); Thread.Sleep(600);
         }
 
         else //morto
         {
             eliminado = true;
-            Console.WriteLine($"Morreu atacando");
+            // Console.WriteLine($"Morreu atacando");
         }
 
     }
 
-    while(!eliminado && ferido && inimigoProximo) //FUGINDO
+    while (!eliminado && ferido && inimigoProximo) //FUGINDO
     {
-        Console.Write($"Teste - ta fugindo... ");
+        transi++;
+        Console.Write($"{transi}ª ação, {nomeNpc} está fugindo");
+        UI.Aguardar();
 
         int nmAlFg = gerador.Next(1, 5);
         if (nmAlFg == 1 || nmAlFg == 2) //inimigo desiste / volta pro procurando
         {
             inimigoProximo = false;
-            Console.WriteLine($"inimigo desiste e vai procurar");
+            Console.WriteLine($"o inimigo desiste e {nomeNpc} vai procurar"); Thread.Sleep(600);
         }
 
         else if (nmAlFg == 3) // se cura / 
         {
             ferido = false;
             inimigoProximo = true;
-            Console.WriteLine($"se cura e vai procurar");
+            Console.WriteLine($"{nomeNpc} se cura e volta a procurar"); Thread.Sleep(600);
         }
 
         else
         {
             eliminado = true; // morre
-            Console.WriteLine($"morreu fugindo");
+            // Console.WriteLine($"morreu fugindo");
         }
     }
 }
 
-Console.WriteLine($"MORREU");
+transi++;
+Console.WriteLine($"\n{transi}ª ação, {nomeNpc} MORREU");
