@@ -17,9 +17,9 @@ public class UI
         Console.WriteLine($"         🦎👹  Bem vindo {nmNpc} 👹🦎           "); Thread.Sleep(1000);
         Console.BackgroundColor = ConsoleColor.White;
         Console.ForegroundColor = ConsoleColor.Black;
-        Console.WriteLine("            O Jogo             ");
+        Console.WriteLine("            Simulação NPC             ");
         Console.ForegroundColor = ConsoleColor.Black;
-        Console.WriteLine("🐾 🌤️  NPC  🌤️ 🐾 "); Thread.Sleep(1300);
+        Console.WriteLine("               🤖  🐲  ⚔              "); Thread.Sleep(1300);
         Console.ResetColor();
         Console.Clear();
     }
@@ -42,15 +42,22 @@ public class UI
         Console.Clear();
     }
 
-
-
-
-
+    public static void ResultadoFinal(string nmNpc, int tran)
+    {
+        Console.Clear();
+        Console.WriteLine("              🐲 Resultado ⚔              "); Thread.Sleep(800);
+        Console.WriteLine($"Nosso NPC {nmNpc} sobreviveu a {tran} transições antes de morrer");
+        Aguardar();
+        Console.Write("Digite qualquer tecla para encerrar");
+        Aguardar();
+        Console.ReadKey();
+    }
 
 
     public static void InimigoRandall()
     {
         AguardaAntesDaImagem();
+        Console.WriteLine("Inimigo Randall");
         Console.WriteLine(@"````````````````````'Xx.`*+'.+^`````````````````````````````
 `````````````````````^X^`+*.,+^`````````````````````````````
 `````````````````````'Xx.:*^^^^`````````````````````````````
@@ -96,6 +103,7 @@ public class UI
     public static void InimigoShrekWazowski()
     {
         AguardaAntesDaImagem();
+        Console.WriteLine("Inimigo ShrekWazowski");
         Console.WriteLine(@"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⢀⡀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⢰⣿⢻⡾⡇
 ⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⡞⠋⠉⠉⠀⣀⡉⠉⠉⠉⠒⠦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣷⡄⠀⠀⢠⣿⢋⣾⣿⠁
@@ -131,9 +139,10 @@ public class UI
 ⠀⠀⠀⠀⠀⠀⠈⠉⠉⠙⠛⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠷⠶⣤⣤⣤⣀⣀⡈⠙⡁⢸⡛⢿⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠙⠛⠺⠾⠿⠾⠿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
     }
-
     public static void InimigoWaternoose()
     {
+        AguardaAntesDaImagem();
+        Console.WriteLine("Inimigo Waternoose");
         Console.WriteLine(@"```''```''````'````'`````.::,''```''```''````'````'````'````
 ```````````````````````'+xx*^:.:,'``````````````````````````
 ``````````````````````.xxxxx++:+::.`````````````````````````

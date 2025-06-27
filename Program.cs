@@ -32,11 +32,26 @@ while (!eliminado) //PROCURANDO
     {
         transi++;
         // Random gerador = new Random();
+
         int nmAlAt = gerador.Next(1, 5);
         int nmInimigo = gerador.Next(1, 4); //nm gerador inimigo
 
-        Console.WriteLine($"{transi}ª ação - {nomeNpc} ataca Randall");
-        UI.InimigoRandall();
+        Console.WriteLine($"{transi}ª ação - {nomeNpc} ataca inimigo");
+
+        if (nmInimigo == 1)
+        {
+            UI.InimigoShrekWazowski();
+        }
+
+        else if (nmInimigo == 2)
+        {
+            UI.InimigoRandall();
+        }
+
+        else
+        {
+            UI.InimigoWaternoose();
+        }
 
         //COLOCAR MONSTROS DIFERENTES
 
@@ -101,3 +116,7 @@ while (!eliminado) //PROCURANDO
 
 transi++;
 Console.WriteLine($"\n{transi}ª ação, {nomeNpc} MORREU");
+UI.Aguardar();
+Thread.Sleep(1500);
+
+UI.ResultadoFinal(nomeNpc, transi);
