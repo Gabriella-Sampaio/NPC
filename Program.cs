@@ -108,7 +108,7 @@ while (!eliminado) //PROCURANDO
 
         else
         {
-            eliminado = true; // morre
+            eliminado = true; // morreu
             // Console.WriteLine($"morreu fugindo");
         }
     }
