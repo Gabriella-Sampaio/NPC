@@ -1,4 +1,7 @@
-﻿bool inimigoProximo, ferido = true, eliminado = false;
+﻿using System.Text;
+
+Console.OutputEncoding = Encoding.UTF8;
+bool inimigoProximo, ferido = true, eliminado = false;
 int transi = 0;
 Random gerador = new Random();
 
