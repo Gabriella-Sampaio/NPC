@@ -26,13 +26,13 @@ public class NPC
                 ferido = false;
                 inimigoProximo = true;
                 eliminado = false;
-                Console.WriteLine($"Os monstros estão por perto e {nomeNPC} vai atacar"); Thread.Sleep(600);
+                Console.WriteLine($"Os monstros estão por perto e {nomeNPC} vai atacar"); Thread.Sleep(900);
             }
 
             else // continua procurando
             {
                 inimigoProximo = false;
-                Console.WriteLine($"{nomeNPC} vai continuar procurando"); Thread.Sleep(600);
+                Console.WriteLine($"{nomeNPC} vai continuar procurando"); Thread.Sleep(900);
             }
 
 
@@ -67,13 +67,13 @@ public class NPC
                 {
                     ferido = false;
                     inimigoProximo = true;
-                    Console.WriteLine($"{nomeNPC} vai continuar atacando"); Thread.Sleep(600);
+                    Console.WriteLine($"{nomeNPC} vai continuar atacando"); Thread.Sleep(900);
                 }
 
                 else if (nmAlAt == 2) // fugindo
                 {
                     ferido = true;
-                    Console.WriteLine($"{nomeNPC} vai fugir"); Thread.Sleep(600);
+                    Console.WriteLine($"{nomeNPC} vai fugir"); Thread.Sleep(900);
 
                 }
 
@@ -81,7 +81,7 @@ public class NPC
                 {
                     ferido = true;
                     inimigoProximo = false;
-                    Console.WriteLine($"{nomeNPC} desiste e volta a procurar"); Thread.Sleep(600);
+                    Console.WriteLine($"{nomeNPC} desiste e volta a procurar"); Thread.Sleep(900);
                 }
 
                 else //morto
@@ -102,14 +102,14 @@ public class NPC
                 if (nmAlFg == 1 || nmAlFg == 2) //inimigo desiste / volta pro procurando
                 {
                     inimigoProximo = false;
-                    Console.WriteLine($"o inimigo desiste e {nomeNPC} vai procurar"); Thread.Sleep(600);
+                    Console.WriteLine($"o inimigo desiste e {nomeNPC} vai procurar"); Thread.Sleep(900);
                 }
 
                 else if (nmAlFg == 3) // se cura / 
                 {
                     ferido = false;
                     inimigoProximo = true;
-                    Console.WriteLine($"{nomeNPC} se cura e volta a procurar outro monstro"); Thread.Sleep(600);
+                    Console.WriteLine($"{nomeNPC} se cura e volta a procurar outro monstro"); Thread.Sleep(900);
                 }
 
                 else
@@ -120,7 +120,11 @@ public class NPC
             }
         }
         acao++;
-        Console.WriteLine($"\n{acao}ª ação, {nomeNPC} MORREU");
+        Console.Write($"\n{acao}ª ação, {nomeNPC} ");
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("MORREU ☠️");
+        Console.ResetColor();
+        
         Acoes = acao;
         UI.ConfirmaContinuacao("Digite qualquer tecla para continuar");
         Console.ReadKey();
