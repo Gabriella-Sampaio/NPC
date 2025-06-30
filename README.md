@@ -10,7 +10,7 @@ Execute o programa, dê um nome ao seu NPC e acompanhe a aventura. Ao final, des
 
 
 ## ⬇️🚀 Download
-Baixe nossa simulação [aqui](publish.zip)
+Baixe nossa simulação [aqui](publish.zip).
 Ao baixar o arquivo, extraia a pasta em zip, entre na pasta e execute o programa NPC. 
 
 ✨ **Divirta-se explorando o mundo do NPC!** ✨
