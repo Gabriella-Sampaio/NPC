@@ -1,11 +1,4 @@
 # NPC 
-
- _   _  ____   ____  
-| \ | ||  _ \ / ___| 
-|  \| || |_) | |     
-| |\  ||  __/| |___  
-|_| \_||_|    \____| 
-
 ## UMA AVENTURA CONTRA O UNIVERSO DE MONSTROS S.A.
 
 ## 📜 Descrição
