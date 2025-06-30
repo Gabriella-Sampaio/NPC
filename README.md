@@ -1,14 +1,23 @@
-# NPC
-## Descrição
-Esse programa contém uma simulação de NPC, com nome de sua escolha, onde seu objetivo é simular a aventura de um NPC até (tentar) eliminar seu inimnigo ou morrer.
+# NPC 
 
-## Modo de jogar
-Execute o programa, dê um nome ao NPC e assita a aventura. No final veja a quantos atos seu NPC sobreviveu.
+ _   _  ____   ____  
+| \ | ||  _ \ / ___| 
+|  \| || |_) | |     
+| |\  ||  __/| |___  
+|_| \_||_|    \____| 
+
+## UMA AVENTURA CONTRA O UNIVERSO DE MONSTROS S.A.
+
+## 📜 Descrição
+Este programa simula a Inteligencia Artificial de aventura de um NPC (Non-Player Character) em um mundo de monstros.
+O objetivo é guiar um NPC escolhido por você através de desafios, tentando eliminar seu inimigo e sobreviver o maior tempo possível.
+
+## 🕹️ Modo de jogar
+Execute o programa, dê um nome ao seu NPC e acompanhe a aventura. Ao final, descubra quantos atos ele conseguiu sobreviver.
 
 
-## Download
+## ⬇️🚀 Download
 Baixe nossa simulação [aqui](publish.zip)
+Ao baixar o arquivo, extraia a pasta em zip, entre na pasta e execute o programa NPC. 
 
-## Execução 
-Para usar esse programa, baixe o arquivo acima, descompacte 
-
+✨ **Divirta-se explorando o mundo do NPC!** ✨
